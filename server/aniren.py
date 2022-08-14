@@ -15,7 +15,7 @@ for (dirpath, dirnames, filenames) in walk(ANIME_PATH):
         animes.extend(filenames)
         break
 
-for anime in animes:
+for anime in sorted(animes):
     ANIME_EPISODE += 1
     old_name = "{}/{}".format(ANIME_PATH, anime)
     new_name = "{}/{}-{}.{}".format(ANIME_PATH, ANIME_TITLE, str(ANIME_EPISODE).zfill(2),"mp4")
