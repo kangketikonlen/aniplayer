@@ -66,6 +66,7 @@ if (title) {
 	player.playlist.autoadvance(0);
 
 	if (index) {
+		index = parseInt(index);
 		player.playlist.currentItem(index);
 	}
 

@@ -10,7 +10,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .video-js .vjs-button:before {
-  content: "\e600";
   font-size: 1em;
   line-height: 2.9;
 }
