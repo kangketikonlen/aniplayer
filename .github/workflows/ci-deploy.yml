@@ -1,0 +1,26 @@
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+name: 👌🏻 Push to server
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to productions
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+        with:
+          host: ${{ secrets.PROD_SERVER }}
+          user: ${{ secrets.PROD_USERNAME }}
+          pass: ${{ secrets.PROD_PASSWORD }}
+          port: ${{ secrets.PROD_PORT }}
+          connect_timeout: 60s
+          first_ssh: |
+            cd ${{ secrets.PROD_REPO_DIR }} && git stash && git fetch -p && git pull
+          last_ssh: |
+            rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/assets ${{ secrets.PROD_ROOT_DIR }}
+            rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/server ${{ secrets.PROD_ROOT_DIR }}
+            rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/index.html ${{ secrets.PROD_ROOT_DIR }}
+            rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/player.html ${{ secrets.PROD_ROOT_DIR }}
