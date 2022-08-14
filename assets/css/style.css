@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'videojs-next-button';
+  src: url('//at.alicdn.com/t/font_qxuvo11c5dkxd2t9.eot');
+  src: url('//at.alicdn.com/t/font_qxuvo11c5dkxd2t9.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_qxuvo11c5dkxd2t9.woff') format('woff'), url('//at.alicdn.com/t/font_qxuvo11c5dkxd2t9.ttf') format('truetype'), url('//at.alicdn.com/t/font_qxuvo11c5dkxd2t9.svg#videojs-next-button') format('svg');
+}
+.video-js .vjs-button {
+  /* font-family: "videojs-next-button" !important; */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.video-js .vjs-button:before {
+  content: "\e600";
+  font-size: 1em;
+  line-height: 2.9;
+}

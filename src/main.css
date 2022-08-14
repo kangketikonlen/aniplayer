@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+  .vjs-tailwind.video-js {
+    @apply text-gray-300;
+  }
+
+  .vjs-tailwind .vjs-big-play-button {
+    @apply text-gray-300;
+  }
+
+  .vjs-tailwind .vjs-volume-level,
+  .vjs-tailwind .vjs-play-progress,
+  .vjs-tailwind .vjs-slider-bar {
+    @apply text-gray-300;
+  }
+
+  .video-wrapper-mobile {
+    @apply lg:place-items-center sm:place-items-center md:place-items-center;
+  }
+
+  .video-mobile {
+    @apply lg:col-start-2 col-span-4;
+  }
+
+  .wrapper-label {
+    @apply flex justify-between px-5 py-3 text-yellow-900 border border-yellow-200 dark:border-yellow-700;
+  }
+
+  .btn-default {
+    @apply inline-block text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 rounded-lg text-sm px-2.5 py-2.5 dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800;
+  }
+}
