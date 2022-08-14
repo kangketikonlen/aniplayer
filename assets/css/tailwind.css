@@ -641,24 +641,12 @@ video {
   height: 14rem;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
-.max-h-24 {
-  max-height: 6rem;
-}
-
 .max-h-56 {
   max-height: 14rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-24 {
-  width: 6rem;
 }
 
 .translate-x-0 {
