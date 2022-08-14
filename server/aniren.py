@@ -18,5 +18,5 @@ for (dirpath, dirnames, filenames) in walk(ANIME_PATH):
 for anime in animes:
     ANIME_EPISODE += 1
     old_name = "{}/{}".format(ANIME_PATH, anime)
-    new_name = "{}/{}-{}".format(ANIME_PATH, ANIME_TITLE, str(ANIME_EPISODE).zfill(2))
+    new_name = "{}/{}-{}.{}".format(ANIME_PATH, ANIME_TITLE, str(ANIME_EPISODE).zfill(2),"mp4")
     os.rename(old_name, new_name)
