@@ -9,7 +9,7 @@ videoTitle.innerHTML = `${title} - ${episode}`;
 for (var i = 0; i < episode; i++) {
 	var eps = pad(i + 1, 2);
 	epsList.innerHTML += `
-		<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+		<tr class="bg-yellow-100 border-b dark:bg-gray-800 dark:border-gray-700">
 		<th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
 			<a href="player.html?t=${title}&ep=${episode}&idx=${i}">${titleCase(title)} - Chapter ${eps}</a>
 		</th>
