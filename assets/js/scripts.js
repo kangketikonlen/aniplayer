@@ -55,7 +55,7 @@ if (title) {
 					type: 'video/mp4'
 				}
 			],
-			poster: '/aniplayer/assets/images/01-amelia-poster.jpeg'
+			poster: 'assets/images/01-amelia-poster.jpeg'
 		};
 	}
 	player.addClass('vjs-tailwind');

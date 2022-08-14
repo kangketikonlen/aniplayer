@@ -7,7 +7,7 @@ if (len(sys.argv) != 2):
 
 ANIME_TITLE = sys.argv[1]
 ANIME_PATH = "videos/" + ANIME_TITLE
-ANIME_EPISODE = 1
+ANIME_EPISODE = 0
 
 animes = []
 for (dirpath, dirnames, filenames) in walk(ANIME_PATH):
