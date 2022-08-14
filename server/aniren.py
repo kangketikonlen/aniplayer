@@ -6,7 +6,7 @@ if (len(sys.argv) != 2):
     sys.exit(1)
 
 ANIME_TITLE = sys.argv[1]
-ANIME_PATH = "videos/"
+ANIME_PATH = "videos/" + ANIME_TITLE
 ANIME_EPISODE = 1
 
 animes = []
