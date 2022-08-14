@@ -14,8 +14,9 @@ const prevBtnEl = document.createElement('button');
 
 let videos = [];
 
-var url = window.location.href;
 var title = getUrlVars()["t"];
+var episode = getUrlVars()["ep"];
+var index = getUrlVars()["idx"];
 
 homeBtnEl.classList.add("vjs-button");
 nextBtnEl.classList.add("vjs-button");
@@ -46,22 +47,28 @@ function getUrlVars() {
 }
 
 if (title) {
-	for (var i = 0; i < 25; i++) {
-		episode = pad(i + 1, 2);
+	for (var i = 0; i < episode; i++) {
+		var eps = pad(i + 1, 2);
 		videos[i] = {
 			sources: [
 				{
-					src: `server/videos/${title}/${title}-${episode}.mp4`,
+					src: `server/videos/${title}/${title}-${eps}.mp4`,
 					type: 'video/mp4'
 				}
 			],
 			poster: 'assets/images/01-amelia-poster.jpeg'
 		};
 	}
+
 	player.addClass('vjs-tailwind');
 	player.landscapeFullscreen();
 	player.playlist(videos);
 	player.playlist.autoadvance(0);
+
+	if (index) {
+		player.playlist.currentItem(index);
+	}
+
 	player.controlBar.el().insertBefore(homeBtnEl, player.controlBar.el().firstChild.nextSibling)
 	player.controlBar.el().insertBefore(nextBtnEl, player.controlBar.el().firstChild.nextSibling)
 	player.controlBar.el().insertBefore(prevBtnEl, player.controlBar.el().firstChild)
