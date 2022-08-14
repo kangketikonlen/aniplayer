@@ -1,7 +1,23 @@
 {
+  "name": "aniplayer",
+  "version": "1.0.0",
+  "description": "Video player web based",
+  "repository": "git@github.com:kangketikonlen/aniplayer.git",
+  "author": "Gilang Pratama <pratamapriadi96@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/main.css -o ./assets/css/tailwind.css",
+    "watch": "npx tailwindcss -i ./src/main.css -o ./assets/css/tailwind.css --watch"
+  },
   "dependencies": {
-    "bootstrap": "^5.2.0",
     "video.js": "^7.20.2",
+    "videojs-landscape-fullscreen": "^11.1111.0",
     "videojs-playlist": "^5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }
