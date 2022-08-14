@@ -23,4 +23,5 @@ jobs:
             rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/assets ${{ secrets.PROD_ROOT_DIR }}
             rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/server ${{ secrets.PROD_ROOT_DIR }}
             rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/index.html ${{ secrets.PROD_ROOT_DIR }}
+            rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/playlist.html ${{ secrets.PROD_ROOT_DIR }}
             rsync -a --progress ${{ secrets.PROD_REPO_DIR }}/player.html ${{ secrets.PROD_ROOT_DIR }}
